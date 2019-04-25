@@ -13,3 +13,131 @@
 // after questions , show the stats of the player and then reroll the function to pick from the object at random , if you have time , you can also have the user pick the theme of questions , then change the css background based on that choice,,,IF YOU HAVE TIME ..
 
 // for fun stuff , include something like a music and a sound when the user picks something.. 
+
+// START CODING HERE : 
+var questions = [		
+
+// test question object .
+
+//QUESTION NUMBER 1 //
+{
+question: "question Number 1", 
+choice: ["answer1","answer2","answer3","answer4"],
+answer: 3,
+right: "assets/images/test.gif",
+wrong: "assets/images/test1.gif",
+},
+//QUESTION NUMBER 1 //
+
+
+//QUESTION NUMBER 2 //
+{
+    question: "question Number 2", 
+    choice: ["answer1","answer2","answer3","answer4"],
+    answer: 1,
+    right: "assets/images/test.gif",
+    wrong: "assets/images/test1.gif",
+
+},
+    //QUESTION NUMBER 2 //
+
+
+//QUESTION NUMBER 3 //
+{
+    question: "question Number 3", 
+    choice: ["answer1","answer2","answer3","answer4"],
+    answer: 3,
+    right: "assets/images/test.gif",
+    wrong: "assets/images/test1.gif",
+
+},
+    //QUESTION NUMBER 3 //
+
+
+    //QUESTION NUMBER 4 //
+{
+    question: "question Number 4", 
+    choice: ["answer1","answer2","answer3","answer4"],
+    answer: 1,
+    right: "assets/images/test.gif" ,
+    wrong: "assets/images/test1.gif",
+
+},
+    //QUESTION NUMBER 4 //
+
+
+    //QUESTION NUMBER 5 //
+{
+    question: "question Number 5", 
+    choice: ["answer1","answer2","answer3","answer4"],
+    answer: 4,
+    right: "assets/images/test.gif",
+    wrong: "assets/images/test1.gif",
+
+
+},
+    //QUESTION NUMBER 5 //
+
+
+
+//END OF QUESTIONARES
+]
+var correctAnswer = 0;
+var wrongAnswer = 0;
+var noAnswer = 0;
+var timeRemaining = 10;
+var intervalId;
+var correctCount = 0;
+var wrongCount = 0;
+var unanswerCount = 0;
+var running = false;
+
+
+$("#gameStart").on("click", function () {
+    $("#gameStart").hide();
+    gameStart ();
+})
+
+
+// MAIN FUNCTION WHEN THE GAME START BUTTON IS PRESSED ---------START
+function gameStart () {
+    runTimer();
+
+}
+
+// MAIN FUNCTION WHEN THE GAME START BUTTON IS PRESSED ---------END
+
+
+
+//TIMER FUNCTIONS HERE ------------------------------------ START
+function runTimer(){
+if (running == false) {
+intervalId = setInterval(decrement, 1000); 
+running = true;
+}
+}
+
+function decrement() {
+$("#timeleft").text(timeRemaining);
+timeRemaining --;
+
+if (timeRemaining === 0) {
+    unanswerCount++;
+    stop();
+    //show that the answer was wrong
+}	
+}
+
+//timer stop
+function stop() {
+running = false;
+clearInterval(intervalId);
+}
+
+//TIMER FUNCTIONS HERE ------------------------------------END
+
+
+
+
+
+
