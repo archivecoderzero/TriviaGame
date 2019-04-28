@@ -11,91 +11,93 @@ $(document).ready(function () {
             question: "How many muscles do you use when you take a step?",
             choice: ["ONE", "200 Muscles", "324 plus 147 if you add the hand sway", "None, we live in a simulation"],
             answer: 1,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right1.gif",
+            wrong: "assets/images/wrong1.gif",
+            time: "assets/images/time1.gif",
 
         },
         {
             question: "Your brain uses just as much power as a ...?",
             choice: ["10-W Light Bulb", "Nuclear Power Plant", "AAA Battery", "let me think.. *bzztt bzzt* "],
             answer: 0,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right2.gif",
+            wrong: "assets/images/wrong2.gif",
+            time: "assets/images/time2.gif",
         },
         {
             question: "Humans (us) in general spends how many years in our lifetime eating?",
             choice: ["All the Time.. *MUNCH CRUNCH*", "5 Years", "1 Year", " \" Wait Im eating\" "],
             answer: 1,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right3.gif",
+            wrong: "assets/images/wrong3.gif",
+            time: "assets/images/time3.gif",
         },
         {
             question: "How many times does an average person breath everyday? ",
             choice: ["(✔) Im a Robot", "86,400", "Only 2 , BREATH IN- thats one , and BREATH OUT ..", "20,000 "],
             answer: 3,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right4.gif",
+            wrong: "assets/images/wrong4.gif",
+            time: "assets/images/time4.gif",
         },
         {
             question: "In a year , how many days do you spend sleeping? ",
             choice: ["150 days", "\" you are in a simulation, you are neither awake nor dreaming \" ", "122 days", "Someday...some.. day.."],
             answer: 2,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right5.gif",
+            wrong: "assets/images/wrong5.gif",
+            time: "assets/images/time5.gif",
         },
         {
             question: "Human Bone is stronger than ... ?",
             choice: ["Titanium Alloy Melded in Thousand Degrees", "4 Slotted +10 Broadsword", "Adamantium Element Number 13", "Steel"],
             answer: 3,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right6.gif",
+            wrong: "assets/images/wrong6.gif",
+            time: "assets/images/time6.gif",
         },
         {
             question: "How many muscles do we use to smile?",
             choice: ["Depends, If you want to include the dash", "More than 59, but less than 99 ..", "Around 43", "00111010 00101001"],
             answer: 2,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right7.gif",
+            wrong: "assets/images/wrong7.gif",
+            time: "assets/images/time7.gif",
         },
         {
             question: "A drop of human blood contains about how many cells?",
             choice: ["Cells are not liquid, So this question is wrong...", "Around 250 Million", "No cells ", "10 Cells , FINAL ANSWER!"],
             answer: 1,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right8.gif",
+            wrong: "assets/images/wrong8.gif",
+            time: "assets/images/time8.gif",
         },
         {
             question: "A typical adult human has **roughly** how many atoms?",
             choice: ["Somewhere around bajillions and trajillions", "7,000,000,000,000,000,000,000,000,000", "No way to count that...", "90 Billion"],
             answer: 1,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right9.gif",
+            wrong: "assets/images/wrong9.gif",
+            time: "assets/images/time9.gif",
 
         },
         {
             question: "Whats the strongest muscle in your body in terms of excerting force?",
             choice: ["Heart... Heart caused alot of war ", "Elbow Muscle", "Arm muscles ofcourse, did you know ? Andy Bolton set a record for lifting 457 kgs ", "Masseter (Jaw Muscle)"],
             answer: 3,
-            right: "assets/images/test.gif",
-            wrong: "assets/images/wrong.gif",
-            time: "assets/images/notime.gif",
+            right: "assets/images/right10.gif",
+            wrong: "assets/images/wrong10.gif",
+            time: "assets/images/time10.gif",
 
         },
 
 
 
-
     ];
 
+    console.log(options[8].right + "positions")
+    console.log(options[6].right + "positions")
+    console.log(options[0].wrong + "positions")
 
     // a variable for correct , wrong and unanswered count
     var correctAnswer = 0;
@@ -167,17 +169,17 @@ $(document).ready(function () {
         $("#timeleft").html("<h3>READY?</h3>");
     }
 
-function almostTime() {
-    if (timer === 2){
-        $("body").css("backgroundImage","url('assets/images/burn.gif')" ,"background-position", "center", "background-repeat"," no-repeat","background-size", "cover");
-        $("#timer").attr("src","assets/images/almosttime.gif");
-        
-    }
-}
+    function almostTime() {
+        if (timer === 2) {
+            $("body").css("backgroundImage", "url('assets/images/burn.gif')", "background-position", "center", "background-repeat", " no-repeat", "background-size", "cover");
+            $("#timer").attr("src", "assets/images/almosttime.gif");
 
-function resetTimerImg() {
-        $("body").css("backgroundImage", "url('assets/images/bg.png')" ,"background-position: center");
-        $("#timer").attr("src","assets/images/time.gif");
+        }
+    }
+
+    function resetTimerImg() {
+        $("body").css("backgroundImage", "url('assets/images/bg.png')", "background-position: center");
+        $("#timer").attr("src", "assets/images/time.gif");
 
     }
 
@@ -315,7 +317,7 @@ function resetTimerImg() {
         // this will be the timer for the pictures to show out if the user has guessed it right or wrong
         let show = setTimeout(function () {
             $("#answers").empty();
-                 //run the score screen if all questions answered, 
+            //run the score screen if all questions answered, 
 
             // since i am using the "SPLICE" the length of options array gets lower everytime it gets spliced out. making the use of ".length" unviable.
             if ((wrongAnswer + correctAnswer + timesUp) === roundChecker) {
@@ -420,15 +422,50 @@ function resetTimerImg() {
     })
     // short handed the display of when the user wins
     function scoreReset() {
-        $("#questions").empty();
-        $("#questions").html("<h3>NICE!! </h3>");
-        $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
-        $("#answers").append("<h4> Incorrect: " + wrongAnswer + "</h4>");
-        $("#answers").append("<h4> Unanswered: " + timesUp + "</h4>");
-        $("#reset").show();
-        correctAnswer = 0;
-        wrongAnswer = 0;
-        timesUp = 0;
+
+        if (correctAnswer > 8) {
+            let aaa = "assets/images/right7.gif";
+            $("#questions").empty();
+            $("#questions").html("<h3> You know yourself ..</h3>");
+            $("#answers").append("<img src=" + aaa + ">");
+            $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
+            $("#answers").append("<h4> Incorrect: " + wrongAnswer + "</h4>");
+            $("#answers").append("<h4> Unanswered: " + timesUp + "</h4>");
+            $("#reset").show();
+            correctAnswer = 0;
+            wrongAnswer = 0;
+            timesUp = 0;
+        }
+
+        else if (correctAnswer >= 5) {
+            let aaa = "assets/images/wrong1.gif";
+            $("#questions").empty();
+            $("#questions").html("<h3>You kinda made it!! .. kinda ..</h3>");
+            $("#answers").append("<img src=" + aaa + ">");
+            $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
+            $("#answers").append("<h4> Incorrect: " + wrongAnswer + "</h4>");
+            $("#answers").append("<h4> Unanswered: " + timesUp + "</h4>");
+            $("#reset").show();
+            correctAnswer = 0;
+            wrongAnswer = 0;
+            timesUp = 0;
+
+
+        }
+
+        else {
+            let aaa = "assets/images/wrong5.gif";
+            $("#questions").empty();
+            $("#questions").html("<h3>Congratulations! you scored more than -1 ! :)</h3>");
+            $("#answers").append("<img src=" + aaa + ">");
+            $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
+            $("#answers").append("<h4> Incorrect: " + wrongAnswer + "</h4>");
+            $("#answers").append("<h4> Unanswered: " + timesUp + "</h4>");
+            $("#reset").show();
+            correctAnswer = 0;
+            wrongAnswer = 0;
+            timesUp = 0;
+        }
     }
 
 })
