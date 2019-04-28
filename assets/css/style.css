@@ -25,15 +25,17 @@
     margin: 10px;
     border: solid 2px black;
     color: white;
+    font-size: 20px;
+    font-weight: 600;
 
 }
 
 .answerchoice:hover {
     transition: .5s ease;
-    filter: contrast(300%);
     border: solid 4px black;
+    font-family: 'Lobster';
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     background-image: url("../../assets/images/qbg.gif");
     height: 100%;
 
