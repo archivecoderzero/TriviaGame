@@ -24,6 +24,67 @@
     padding: 10px;
     margin: 10px;
     border: solid 2px black;
+    color: white;
 
 }
 
+.answerchoice:hover {
+    transition: .5s ease;
+    filter: contrast(300%);
+    border: solid 4px black;
+    color: white;
+    font-size: 20px;
+    background-image: url("../../assets/images/qbg.gif");
+    height: 100%;
+
+}
+  
+#jumbotron {
+    background-image: url("../../assets/images/bgjumbo.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+}
+
+#jumbotron:hover {
+    transition: .5s ease;
+    border: solid 50px black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gugi', cursive;
+    background-image: url("../../assets/images/bgjumbo2.gif");
+}
+.card-footer.text-muted{
+    text-align: center;
+}
+
+.container.main {
+    background-image: url("../../assets/images/bgmain.gif");
+    color: white;
+
+}
+
+
+body {
+    background-image: url("../../assets/images/bg.png");
+
+}
+
+#timeleft {
+    color:black;
+}
+
+#answers {
+    text-align: center;
+}
+
+.row.reset {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+}

@@ -31,6 +31,13 @@ a Trivia Game that uses Vanilla Javascript and Jquery .
 > hide the timer card when the game starts / stops / resets .
 
 
-## Stay Tuned for the updates :)
+##  Version 1.5 04/27/19
 
+> added style (hover effect) on the jumbotron , choices
+
+> added a feature where whenever the time is less than 3 seconds, the background changes
+
+> few bug fixes , when jumbotron is not hiding when reset button is pressed
+
+> changed the footer position to be centered
 

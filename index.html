@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Gugi|Lobster|Monoton" rel="stylesheet">
 </head>
 
 <body>
@@ -20,6 +21,8 @@
 	<nav class="navbar navbar-light bg-light">
 		<span class="navbar-brand mb-0 h1">Trivia Game</span>
 	</nav>
+
+	<br>
 
 	<div id=jumbotron class="jumbotron jumbotron-fluid">
 		<div class="container">
@@ -30,7 +33,7 @@
 	</div>
 
 
-	<div class="container">
+	<div id="main" class="container main">
 		<br>
 		<br>
 
@@ -38,13 +41,13 @@
 			<div class="col-3"></div>
 			<div class="col-6 timer">
 				<div id="timer-card" class="card timer" style="width: 18rem;">
-					<img src="assets/images/time.gif" class="card-img-top" alt="Timer">
+					<img id="timer" src="assets/images/time.gif" class="card-img-top" alt="Timer">
 					<div class="card-body">
 						<div id="timeleft"></div>
 					</div>
 				</div>
 			</div>
-				<div class="col-3"></div>
+			<div class="col-3"></div>
 		</div>
 		<br>
 
@@ -59,14 +62,24 @@
 		<div class="row">
 			<div class="col-3"></div>
 			<div class="col-6 answer">
-				<div id="answers"></div>
-				<br>
-				<button class="btn btn-danger" id="reset">Play Again?</button>
-
+				<div id="answers">
+					<hr>
+				</div>
 			</div>
 			<div class="col-3"></div>
+			<br>
+			<br>
+			<br>
 		</div>
-	</div>
+
+		<div class="row reset">
+			<button class="btn btn-danger" id="reset">Play Again?</button>
+			</div>
+			<br>
+			<br>
+		
+		</div>
+	
 	<br>
 	<br>
 	<br>
@@ -74,7 +87,8 @@
 
 
 	<div class="card-body">
-		<footer class="card-footer text-muted">Copyright: ArchiveCoderZero ,Jk no copyright <i class="fas fa-eye"></i> </footer>
+		<footer class="card-footer text-muted">Copyright: ArchiveCoderZero ,Jk no copyright <i class="fas fa-eye"></i>
+		</footer>
 	</div>
 </body>
 

@@ -2,18 +2,8 @@
 
 $(document).ready(function () {
 
-// REMOVE THIS AFTER THE UPDATES
-    confirm("\n \n \n \n Hello there :)...  \n \n \n ");
-    confirm("\n \n \n \n This is just the barebones structure of the Homework.... a proof of concept that my code works for it.. \n \n \n ");
-    confirm("\n \n \n \n This doesnt have any style or Questions yet.. I will work on it later :) \n \n \n ");
-    confirm("\n \n \n \n I just want to make sure i submit this before 11:59 PM today 04/27/19 \n \n \n ");
-    confirm("\n \n \n \n Cuz the Bootcampspot website might be down.\n \n \n ");
-    confirm("\n \n \n \n This is a proof of concept that my code works \n \n \n ");
-
-
-
-
-// REMOVE THIS AFTER THE UPDATES
+    // REMOVE THIS AFTER THE UPDATES
+    $("#main").hide();
 
     $("#timer-card").hide();
     var options = [
@@ -102,8 +92,8 @@ $(document).ready(function () {
         },
 
 
-    
-    
+
+
     ];
 
 
@@ -142,6 +132,7 @@ $(document).ready(function () {
 
     //get the element id start , then on click of that button..
     $("#start").on("click", function () {
+        $("#main").show();
         $("#jumbotron").hide();
         $("#timer-card").show();
         //hide the start element id , 
@@ -170,11 +161,26 @@ $(document).ready(function () {
         }
     }
 
-// this function prevents the bug of the timer not showing up the right time as soon as the next question gets loaded
-function showTimer() {
-    $("#timer-card").show();    
-    $("#timeleft").html("<h3>READY?</h3>");
+    // this function prevents the bug of the timer not showing up the right time as soon as the next question gets loaded
+    function showTimer() {
+        $("#timer-card").show();
+        $("#timeleft").html("<h3>READY?</h3>");
+    }
+
+function almostTime() {
+    if (timer === 2){
+        $("body").css("backgroundImage","url('assets/images/burn.gif')" ,"background-position", "center", "background-repeat"," no-repeat","background-size", "cover");
+        $("#timer").attr("src","assets/images/almosttime.gif");
+        
+    }
 }
+
+function resetTimerImg() {
+        $("body").css("backgroundImage", "url('assets/images/bg.png')" ,"background-position: center");
+        $("#timer").attr("src","assets/images/time.gif");
+
+    }
+
 
 
 
@@ -183,8 +189,9 @@ function showTimer() {
         //get the element ID of the timeleft , then display it on the HTML , 
         $("#timeleft").html("<h3>Time remaining: " + timer + "</h3>");
         timer--;
+        almostTime();
         //stop timer if reach 0
-        if (timer === 0) {
+        if (timer === -2) {
             // then add to the variable of UNANSWERED COUNT .. 
             timesUp++;
             // run the stop function , reference this later .. 
@@ -215,6 +222,7 @@ function showTimer() {
         // set the running boolean variable to "false" . 
         running = false;
         // clear the intervalNumber . 
+        resetTimerImg();
         clearInterval(intervalNumber);
         timer = 10;
         console.log(intervalNumber + "this is the intervalNumber on the stop function");
@@ -307,9 +315,7 @@ function showTimer() {
         // this will be the timer for the pictures to show out if the user has guessed it right or wrong
         let show = setTimeout(function () {
             $("#answers").empty();
-            // reset the timer back to 10
-            timer = 10;
-            //run the score screen if all questions answered, 
+                 //run the score screen if all questions answered, 
 
             // since i am using the "SPLICE" the length of options array gets lower everytime it gets spliced out. making the use of ".length" unviable.
             if ((wrongAnswer + correctAnswer + timesUp) === roundChecker) {
@@ -355,7 +361,7 @@ function showTimer() {
             } else {
                 runTimer();
                 displayQuestion();
-                        }
+            }
             // this function is wrapped around the timeout 3 seconds to display the correct answer / wrong answer and display the gif
         }, 3000);
 
@@ -378,8 +384,6 @@ function showTimer() {
         // this will be the timer for the pictures to show out if the user has guessed it right or wrong
         let show = setTimeout(function () {
             $("#answers").empty();
-            // reset the timer back to 10
-            timer = 10;
             //run the score screen if all questions answered, 
 
             // since i am using the "SPLICE" the length of options array gets lower everytime it gets spliced out. making the use of ".length" unviable.
@@ -391,7 +395,7 @@ function showTimer() {
             } else {
                 runTimer();
                 displayQuestion();
-                
+
             }
             // this function is wrapped around the timeout 3 seconds to display the correct answer / wrong answer and display the gif
         }, 3000);
@@ -403,7 +407,7 @@ function showTimer() {
 
     // if the user wants to play again, he can click reset
     $("#reset").on("click", function () {
-        $("#jumbotron").show();
+        $("#jumbotron").hide();
         $("#reset").hide();
         $("#answers").empty();
         $("#questions").empty();
