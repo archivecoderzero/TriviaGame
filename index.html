@@ -1,128 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/reset.css" >
-    <link rel="stylesheet" href="assets/css/style.css" >
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <title>Trivia Game</title>
+	<title>Trivia Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="assets/css/reset.css" > -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
-<!-- START HERE -->
 
-<!-- As a heading -->
-<nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">Trivia Game!</span>
-  </nav>
-
-  <div class="jumbotron">
-    <h1 class="display-4">Trivia Game!</h1>
-    <p class="lead">There are 5 random choices .. Blah blah blah</p>
-    <hr class="my-4">
-    <p id="questions"> ?????</p>
-
-<br>
-    <a id= "gameStart" class="btn btn-success btn-lg" href="#" role="button">Game Start</a>
-  </div>
-
-
-  <!-- ROW START -->
-  <div class = "row">
-  <!-- ROW START -->
-
-
-      <!-- SPACER -->
-    <div class = "col-1"></div>
-      <!-- SPACER -->
-
-    <!-- CONTeNT -->
-    <div class = "col-3">
-      <h2> THE TIME REMAINING IS : </h2> <h2 id="timeleft">??</h2>
-    </div>
-    
-    <!-- CONTeNT -->
-
-      <!-- SPACER -->
-    <div class = "col-1"></div>
-      <!-- SPACER -->
-
-
-    <!-- CONTeNT -->
-    <div class = "col-3"></div>
-    <!-- CONTeNT -->
-
-      <!-- SPACER -->
-      <div class = "col-1"></div>
-      <!-- SPACER -->
-
-
-    <!-- CONTeNT -->
-    <div class = "col-3"></div>
-    <!-- CONTeNT -->
-
-
-
-    <!-- ROW DIV -->
-    </div>
-    <!-- ROW DIV -->
-
-
-
-
-
-    <div class="card-footer">
-            <small class="text-muted">Trivia Game : Archive Coder Zero</small>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- END HERE -->
-
-<!-- SCRIPT FILE DO NOT TOUCH -->
-<script src="assets/javascript/game.js"></script>
-<!-- SCRIPT FILE DO NOT TOUCH -->
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-brand mb-0 h1">Trivia Game</span>
+	</nav>
+
+	<div id=jumbotron class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">Trivia Game</h1>
+			<p class="lead">Do you know yourself?</p>
+			<button class="btn btn-success" id="start">Im Ready!</button>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<br>
+		<br>
+
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 timer">
+				<div id="timer-card" class="card timer" style="width: 18rem;">
+					<img src="assets/images/time.gif" class="card-img-top" alt="Timer">
+					<div class="card-body">
+						<div id="timeleft"></div>
+					</div>
+				</div>
+			</div>
+				<div class="col-3"></div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 question">
+				<div id="questions"></div>
+			</div>
+			<div class="col-3"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 answer">
+				<div id="answers"></div>
+				<br>
+				<button class="btn btn-danger" id="reset">Play Again?</button>
+
+			</div>
+			<div class="col-3"></div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+
+
+	<div class="card-body">
+		<footer class="card-footer text-muted">Copyright: ArchiveCoderZero ,Jk no copyright <i class="fas fa-eye"></i> </footer>
+	</div>
 </body>
-
 
 </html>

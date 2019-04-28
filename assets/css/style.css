@@ -1,0 +1,29 @@
+.col-6.timer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card.timer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-6.question {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.answerchoice {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px black;
+
+}
+
