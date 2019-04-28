@@ -302,6 +302,8 @@ $(document).ready(function () {
 
     // roundChecker function
     function rightAnswer() {
+        $('audio#right')[0].play();
+
         $("#timer-card").hide();
         // this will append the image if the answer is correct
         $("#answers").append("<img src=" + pick.right + ">");
@@ -337,6 +339,7 @@ $(document).ready(function () {
     }
     // WRONG ANSWER FUNCTION, EXACT COPY OF THE RIGHT ANSWER FUNCTION, just calling the associated gif for the wrong answer
     function wrongPick() {
+        $('audio#wrong')[0].play();
         $("#timer-card").hide();
         // this will append the image if the answer is correct
         $("#answers").append("<img src=" + pick.wrong + ">");
@@ -371,6 +374,7 @@ $(document).ready(function () {
     }
 
     function ranOut() {
+        $('audio#time')[0].play();
         $("#timer-card").hide();
         // this will append the image if the answer is correct
         $("#answers").append("<img src=" + pick.time + ">");
@@ -426,6 +430,7 @@ $(document).ready(function () {
         if (correctAnswer > 8) {
             let aaa = "assets/images/right7.gif";
             $("#questions").empty();
+            $('audio#win')[0].play();
             $("#questions").html("<h3> You know yourself ..</h3>");
             $("#answers").append("<img src=" + aaa + ">");
             $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
@@ -439,6 +444,7 @@ $(document).ready(function () {
 
         else if (correctAnswer >= 5) {
             let aaa = "assets/images/wrong1.gif";
+            $('audio#meh')[0].play();
             $("#questions").empty();
             $("#questions").html("<h3>You kinda made it!! .. kinda ..</h3>");
             $("#answers").append("<img src=" + aaa + ">");
@@ -455,6 +461,7 @@ $(document).ready(function () {
 
         else {
             let aaa = "assets/images/wrong5.gif";
+            $('audio#loss')[0].play();
             $("#questions").empty();
             $("#questions").html("<h3>Congratulations! you scored more than -1 ! :)</h3>");
             $("#answers").append("<img src=" + aaa + ">");

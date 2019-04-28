@@ -47,3 +47,13 @@ Note Deployed version that has all the functionality described on the homework. 
 
 > changed the footer position to be centered
 
+##  Version 1.6 04/28/19
+
+> added the "real questions"
+
+> added specific photo for each right / wrong / or times up event
+
+> added sounds (idk though)
+
+
+
