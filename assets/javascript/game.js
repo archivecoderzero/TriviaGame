@@ -50,7 +50,7 @@ $(document).ready(function () {
         },
         {
             question: "Human Bone is stronger than ... ?",
-            choice: ["Titanium", "4 Slotted +10 Broadsword", "Adamantium", "Steel"],
+            choice: ["Titanium Alloy Melded in Thousand Degrees", "4 Slotted +10 Broadsword", "Adamantium Element Number 13", "Steel"],
             answer: 3,
             right: "assets/images/test.gif",
             wrong: "assets/images/wrong.gif",
@@ -58,7 +58,7 @@ $(document).ready(function () {
         },
         {
             question: "How many muscles do we use to smile?",
-            choice: ["Depends, If you want to include the dash", "More than 59", "Around 43", "00111010 00101001"],
+            choice: ["Depends, If you want to include the dash", "More than 59, but less than 99 ..", "Around 43", "00111010 00101001"],
             answer: 2,
             right: "assets/images/test.gif",
             wrong: "assets/images/wrong.gif",
@@ -66,7 +66,7 @@ $(document).ready(function () {
         },
         {
             question: "A drop of human blood contains about how many cells?",
-            choice: ["Cells are not liquid, So this question is wrong...", "Around 250 Million", "Around 250 Billion", "5 Cells , FINAL ANSWER!"],
+            choice: ["Cells are not liquid, So this question is wrong...", "Around 250 Million", "No cells ", "10 Cells , FINAL ANSWER!"],
             answer: 1,
             right: "assets/images/test.gif",
             wrong: "assets/images/wrong.gif",
@@ -74,7 +74,7 @@ $(document).ready(function () {
         },
         {
             question: "A typical adult human has **roughly** how many atoms?",
-            choice: ["1 Million Atoms", "7,000,000,000,000,000,000,000,000,000", "No way to count that...", "90 Billion"],
+            choice: ["Somewhere around bajillions and trajillions", "7,000,000,000,000,000,000,000,000,000", "No way to count that...", "90 Billion"],
             answer: 1,
             right: "assets/images/test.gif",
             wrong: "assets/images/wrong.gif",
@@ -83,7 +83,7 @@ $(document).ready(function () {
         },
         {
             question: "Whats the strongest muscle in your body in terms of excerting force?",
-            choice: ["Heart.... heart gives us courage.. heart gives us hope.. ", "I benchpress 300 Lbs so pectoral Muscle for sure", "Arm muscles ofcourse, did you know ? Andy Bolton set a record for lifting 457 kgs ", "Masseter (Jaw Muscle)s"],
+            choice: ["Heart... Heart caused alot of war ", "Elbow Muscle", "Arm muscles ofcourse, did you know ? Andy Bolton set a record for lifting 457 kgs ", "Masseter (Jaw Muscle)"],
             answer: 3,
             right: "assets/images/test.gif",
             wrong: "assets/images/wrong.gif",

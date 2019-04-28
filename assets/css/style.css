@@ -23,7 +23,7 @@
     margin-right: auto;
     padding: 10px;
     margin: 10px;
-    border: solid 2px black;
+    border: solid 2px blue;
     color: white;
     font-size: 20px;
     font-weight: 600;
@@ -32,7 +32,7 @@
 
 .answerchoice:hover {
     transition: .5s ease;
-    border: solid 4px black;
+    border: solid 4px gold;
     font-family: 'Lobster';
     color: white;
     font-size: 25px;
