@@ -26,6 +26,7 @@
 
 	<div id=jumbotron class="jumbotron jumbotron-fluid">
 		<div class="container">
+			<br>
 			<h1 class="display-4">Trivia Game</h1>
 			<p class="lead">Do you know yourself?</p>
 			<button class="btn btn-success" id="start">Im Ready!</button>
@@ -37,7 +38,7 @@
 		<br>
 		<br>
 
-		<div class="row">
+		<div class="row timer">
 			<div class="col-3"></div>
 			<div class="col-6 timer">
 				<div id="timer-card" class="card timer" style="width: 18rem;">
@@ -105,8 +106,8 @@
 		<source src="assets/audio/fail.wav" type="audio/mpeg">
 	  </audio>
 
-	  <audio id="win">
-		<source src="assets/audio/win.wav" type="audio/mpeg">
+	  <audio id="winner">
+		<source src="assets/audio/winner.wav" type="audio/mpeg">
 	  </audio>
 
 	  <audio id="meh">
@@ -117,7 +118,14 @@
 		<source src="assets/audio/loss.wav" type="audio/mpeg">
 	  </audio>
 
+	  <audio id="clock">
+			<source src="assets/audio/clock.wav" type="audio/mpeg">
+		  </audio>
 
+		  <audio id="click">
+				<source src="assets/audio/click.wav" type="audio/mpeg">
+			  </audio>
+	
 
 
 </body>

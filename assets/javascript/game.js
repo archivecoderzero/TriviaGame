@@ -9,7 +9,7 @@ $(document).ready(function () {
     var options = [
         {
             question: "How many muscles do you use when you take a step?",
-            choice: ["ONE", "200 Muscles", "324 plus 147 if you add the hand sway", "None, we live in a simulation"],
+            choice: ["ONE! its called the leg muscle..and yes im SURE!", "200 Muscles", "324 plus 147 if you add the hand sway", "None, we live in a simulation"],
             answer: 1,
             right: "assets/images/right1.gif",
             wrong: "assets/images/wrong1.gif",
@@ -18,7 +18,7 @@ $(document).ready(function () {
         },
         {
             question: "Your brain uses just as much power as a ...?",
-            choice: ["10-W Light Bulb", "Nuclear Power Plant", "AAA Battery", "let me think.. *bzztt bzzt* "],
+            choice: ["10-W Light Bulb", "Nuclear Power Plant", "AAA Battery 1.5 Volts ", "let me think.. *bzztt bzzt* right now its using up energy like the T-1300 2nd Gen Motor"],
             answer: 0,
             right: "assets/images/right2.gif",
             wrong: "assets/images/wrong2.gif",
@@ -26,15 +26,15 @@ $(document).ready(function () {
         },
         {
             question: "Humans (us) in general spends how many years in our lifetime eating?",
-            choice: ["All the Time.. *MUNCH CRUNCH*", "5 Years", "1 Year", " \" Wait Im eating\" "],
-            answer: 1,
+            choice: ["All the Time.. *MUNCH CRUNCH..MUNCH*", "1 Year", "I will answer this after I eat", " 5 Years "],
+            answer: 3,
             right: "assets/images/right3.gif",
             wrong: "assets/images/wrong3.gif",
             time: "assets/images/time3.gif",
         },
         {
             question: "How many times does an average person breath everyday? ",
-            choice: ["(✔) Im a Robot", "86,400", "Only 2 , BREATH IN- thats one , and BREATH OUT ..", "20,000 "],
+            choice: ["(✔) Im a Robot", "86,400", "Only 2 , BREATH IN- thats one , and BREATH OUT. see TWO! ..", "20,000 "],
             answer: 3,
             right: "assets/images/right4.gif",
             wrong: "assets/images/wrong4.gif",
@@ -50,7 +50,7 @@ $(document).ready(function () {
         },
         {
             question: "Human Bone is stronger than ... ?",
-            choice: ["Titanium Alloy Melded in Thousand Degrees", "4 Slotted +10 Broadsword", "Adamantium Element Number 13", "Steel"],
+            choice: ["Melded Titanium Alloy ", "4 Slotted +10 Broadsword", "Adamantium 13", "Steel"],
             answer: 3,
             right: "assets/images/right6.gif",
             wrong: "assets/images/wrong6.gif",
@@ -58,7 +58,7 @@ $(document).ready(function () {
         },
         {
             question: "How many muscles do we use to smile?",
-            choice: ["Depends, If you want to include the dash", "More than 59, but less than 99 ..", "Around 43", "00111010 00101001"],
+            choice: ["Depends, If you want to include the dash .:-) ", "More than 59, but less than 100 ..", "43", "00111010 00101001"],
             answer: 2,
             right: "assets/images/right7.gif",
             wrong: "assets/images/wrong7.gif",
@@ -66,15 +66,15 @@ $(document).ready(function () {
         },
         {
             question: "A drop of human blood contains about how many cells?",
-            choice: ["Cells are not liquid, So this question is wrong...", "Around 250 Million", "No cells ", "10 Cells , FINAL ANSWER!"],
+            choice: ["Cells are not liquid, So this question is invalid...", "Around 250 Million", "1 Billion", "Red and white blood cell. so 2 , FINAL ANSWER.."],
             answer: 1,
             right: "assets/images/right8.gif",
             wrong: "assets/images/wrong8.gif",
             time: "assets/images/time8.gif",
         },
         {
-            question: "A typical adult human has **roughly** how many atoms?",
-            choice: ["Somewhere around bajillions and trajillions", "7,000,000,000,000,000,000,000,000,000", "No way to count that...", "90 Billion"],
+            question: "A typical adult human has roughly how many atoms?",
+            choice: ["Somewhere around Bajillions and Trajillions , but less than Quajilions", "7,000,000,000,000,000,000,000,000,000", "No way to count that...", "90 Billion"],
             answer: 1,
             right: "assets/images/right9.gif",
             wrong: "assets/images/wrong9.gif",
@@ -83,7 +83,7 @@ $(document).ready(function () {
         },
         {
             question: "Whats the strongest muscle in your body in terms of excerting force?",
-            choice: ["Heart... Heart caused alot of war ", "Elbow Muscle", "Arm muscles ofcourse, did you know ? Andy Bolton set a record for lifting 457 kgs ", "Masseter (Jaw Muscle)"],
+            choice: ["The Heart, our human emotions are catalyst for war", "Elbow Muscle ", "Muscle group of Biceps and Triceps", "Masseter (Jaw Muscle)"],
             answer: 3,
             right: "assets/images/right10.gif",
             wrong: "assets/images/wrong10.gif",
@@ -163,6 +163,7 @@ $(document).ready(function () {
         }
     }
 
+
     // this function prevents the bug of the timer not showing up the right time as soon as the next question gets loaded
     function showTimer() {
         $("#timer-card").show();
@@ -171,8 +172,11 @@ $(document).ready(function () {
 
     function almostTime() {
         if (timer === 2) {
+            $("#main").css("backgroundImage", "url('assets/images/timebgg1.gif')", "background-position", "center", "background-repeat", " no-repeat", "background-size", "cover");
             $("body").css("backgroundImage", "url('assets/images/burn.gif')", "background-position", "center", "background-repeat", " no-repeat", "background-size", "cover");
             $("#timer").attr("src", "assets/images/almosttime.gif");
+            $('audio#clock')[0].play();
+
 
         }
     }
@@ -180,6 +184,8 @@ $(document).ready(function () {
     function resetTimerImg() {
         $("body").css("backgroundImage", "url('assets/images/bg.png')", "background-position: center");
         $("#timer").attr("src", "assets/images/time.gif");
+        $("#main").css("backgroundImage", "url('assets/images/bgmain.gif')", "background-position", "center", "background-repeat", " no-repeat", "background-size", "cover");
+
 
     }
 
@@ -253,7 +259,8 @@ $(document).ready(function () {
             userChoice.addClass("answerchoice");
             // on that generated variable , add the html an html text to it called , pick.choice[i] this will display all the options 
             userChoice.html(pick.choice[i]);
-
+            userChoice.attr('id',"sound"+ i);
+            console.log("sound" + i);
             //assign array position to it so can check answer, generate an attribute for it , this will be the basis for the checker, the attribute to be assigned is the number of the index
             userChoice.attr("data-guessvalue", i);
             // console.log (userChoice.attr + "THIS IS THE USERCHOICEATTR");
@@ -430,7 +437,7 @@ $(document).ready(function () {
         if (correctAnswer > 8) {
             let aaa = "assets/images/right7.gif";
             $("#questions").empty();
-            $('audio#win')[0].play();
+            $('audio#winner')[0].play();
             $("#questions").html("<h3> You know yourself ..</h3>");
             $("#answers").append("<img src=" + aaa + ">");
             $("#answers").append("<h4> Correct: " + correctAnswer + "</h4>");
@@ -474,6 +481,34 @@ $(document).ready(function () {
             timesUp = 0;
         }
     }
+
+    function clickclick() {
+        $('audio#click')[0].play();
+      }
+
+
+    $("#sound0").mouseover(function() {
+        clickclick();
+        console.log("ENTERING")
+    });
+
+    $("#sound1").mouseover(function() {
+        clickclick();
+        console.log("ENTERING")
+    });
+
+    $("#sound2").mouseover(function() {
+        clickclick();
+        console.log("ENTERING")
+    });
+
+    $("#sound3").mouseover(function() {
+        clickclick();
+        console.log("ENTERING")
+    });
+        
+
+
 
 })
 

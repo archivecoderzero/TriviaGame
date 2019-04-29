@@ -2,13 +2,23 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .card.timer {
     margin-left: auto;
     margin-right: auto;
 }
+
+#timer-card{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timeleft {
+    position: sticky;
+    top: 20px;
+}
+
 
 .col-6.question {
     text-align: center;
@@ -49,6 +59,7 @@
     color: white;
     font-size: 45px;
     text-align: center;
+    height: 500px;
 }
 
 #jumbotron:hover {
@@ -67,7 +78,8 @@
 .container.main {
     background-image: url("../../assets/images/bgmain.gif");
     color: white;
-
+    overflow: hidden;
+    height: 800px;
 }
 
 
@@ -85,8 +97,12 @@ body {
 }
 
 .row.reset {
-        height: 100%;
+        height:25%;
         display: flex;
         align-items: center;
         justify-content: center;   
+}
+
+.navbar {
+    background-image: url("../../assets/images/navbar.gif");
 }
