@@ -1,7 +1,6 @@
 // create an object of questions
 
 $(document).ready(function () {
-
     // REMOVE THIS AFTER THE UPDATES
     $("#main").hide();
 
@@ -508,7 +507,19 @@ $(document).ready(function () {
     });
         
 
+var debugclick = 0;
 
+$(this).on("click", function () {
+    console.log(debugclick)
+    debugclick++
+    console.log(debugclick)
+    if (debugclick === 15){
+        scoreReset() ;
+        $("#answers").empty();
+        alert("debug end screen")
+    }
+
+})
 
 })
 
