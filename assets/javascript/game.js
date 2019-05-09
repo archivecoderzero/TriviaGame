@@ -981,18 +981,18 @@ $(document).ready(function () {
 
 var debugclick = 0;
 
-$(this).on("click", function () {
-    console.log(debugclick)
-    debugclick++
-    console.log(debugclick)
-    if (debugclick === 15){
-        correctAnswer = 5;
-        scoreReset();
-        $("#answers").empty();
-        alert("debug end screen")
-    }
+// $(this).on("click", function () {
+//     console.log(debugclick)
+//     debugclick++
+//     console.log(debugclick)
+//     if (debugclick === 15){
+//         correctAnswer = 5;
+//         scoreReset();
+//         $("#answers").empty();
+//         alert("debug end screen")
+//     }
 
-})
+// })
 
 })
 
