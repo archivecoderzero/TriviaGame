@@ -66,11 +66,13 @@ This game is about yourself .. **Do you know yourself?**  This are the facts abo
 
 > included is a debugger function which on 15 clicks , the developer can see the tally , this is useful for debugging the end screen . the developer can also define the variable correct answer so it will show the correct screen when the function has proc.
 
+> FIXED issue on the SERIOUS MODE , after 10 splices it does not push into the correct array
 ### Known Issues / Potential Issues :
 
 1. Over 100 MB due to heavy usage of GIF stored locally . 
 2. The code for SERIOUS MODE is functional but not DRY . 
 > 05/08/19 - Possible solutions includes creating an IF statement depending on the user choice, or setting variable that adds +1 to trigger a different function . 
+3. **FIXED** SERIOUS MODE not pushing to the correct array .
 
 
 
