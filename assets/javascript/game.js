@@ -477,7 +477,6 @@ $(document).ready(function () {
     }
 
     function ranOut() {
-        $('audio#time')[0].play();
         $("#timer-card").hide();
         // this will append the image if the answer is correct
         $("#answers").append("<img src=" + pick.time + ">");
@@ -840,7 +839,6 @@ $(document).ready(function () {
     }
 
     function ranOut1() {
-        $('audio#time')[0].play();
         $("#timer-card").hide();
         // this will append the image if the answer is correct
         $("#answers").append("<img src=" + pick.time + ">");
