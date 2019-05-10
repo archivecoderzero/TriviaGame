@@ -239,6 +239,7 @@ $(document).ready(function () {
         for (var i = 0; i < options.length; i++) {
             // push the index of the option[i] to the array holder , to be used later .. reference this
             holder.push(options[i]);
+            holder1.push(options1[i]);
             // console.log (holder);
             // console.log (options[i] + "this is the options") ;
         }
@@ -616,6 +617,7 @@ $(document).ready(function () {
         for (var i = 0; i < options1.length; i++) {
             // push the index of the option[i] to the array holder , to be used later .. reference this
             holder1.push(options1[i]);
+            holder.push(options[i]);
             // console.log (holder);
             // console.log (options[i] + "this is the options") ;
         }
